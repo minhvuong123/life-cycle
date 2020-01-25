@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'life-cycle';
+  private number: number = 123;
+  name: string = "king";
+
+  get counter(){
+    return this.number;
+  }
+  set counter(value){
+    this.number = value;
+  }
+
+  increment(){
+    this.counter++;
+  }
+
+  decrement(){
+    this.counter--;
+  }
+
+  updateValue() {
+    this.name = "update king";
+  }
 }
